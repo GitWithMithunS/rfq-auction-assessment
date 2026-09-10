@@ -1,0 +1,56 @@
+# =========================
+# IDE / Editor
+# =========================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# =========================
+# Java / Maven
+# =========================
+**/target/
+**/build/
+*.class
+
+# Maven wrapper generated/local files
+.mvn/timing.properties
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Node / React (if frontend is added later)
+# =========================
+node_modules/
+dist/
+coverage/
+
+# =========================
+# Codex / AI assistant support files
+# =========================
+help.md
+HELP.md
+.codex/
+AGENTS.md
