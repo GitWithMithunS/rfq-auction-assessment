@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom'
+export default function NotFoundPage() { return <div className="mx-auto max-w-md py-20 text-center"><p className="text-sm font-semibold text-blue-700">404</p><h1 className="mt-2 text-3xl font-semibold">Page not found</h1><p className="mt-3 text-slate-600">This page does not exist or is no longer available.</p><Link to="/" className="mt-6 inline-block rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white">Back to auctions</Link></div> }

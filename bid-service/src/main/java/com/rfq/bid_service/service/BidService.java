@@ -34,6 +34,19 @@ public class BidService {
         return Map.of("id", s.getId(), "name", s.getName(), "active", s.isActive());
     }
 
+    @Transactional(readOnly = true)
+    public List<Map<String, Object>> suppliers() {
+        return suppliers.findAll().stream()
+                .map(s -> {
+                    Map<String, Object> result = new LinkedHashMap<>();
+                    result.put("id", s.getId());
+                    result.put("name", s.getName());
+                    result.put("active", s.isActive());
+                    return result;
+                })
+                .toList();
+    }
+
     @Transactional
     public Map<String, Object> submit(SubmitBidRequest r) {
         Supplier s = suppliers.findById(r.supplierId()).orElseThrow(() -> new NoSuchElementException("Supplier not found"));

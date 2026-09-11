@@ -21,4 +21,10 @@ public class SupplierController {
     public Map<String, Object> create(@Valid @RequestBody CreateSupplierRequest request) {
         return service.createSupplier(request);
     }
+
+    @GetMapping
+    public List<Map<String, Object>> list() {
+        return service.suppliers();
+    }
+
 }
